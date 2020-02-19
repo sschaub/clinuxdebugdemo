@@ -13,15 +13,13 @@
 
 #include <stdio.h>
 
-int count = 0;
-
-void crash() {
-    int result = 5 / count; // causes crash
+void crash(int num) {
+    int result = 5 / num; // causes crash
 }
 
 int main(int argc, char **argv) {
     puts("Prepare to die!");
-    crash();
+    crash(0);
 
     return 0;
 }
